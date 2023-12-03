@@ -1,0 +1,522 @@
+@import url('https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&family=Paytone+One&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,500;1,700;1,800;1,900&family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,900;1,300;1,400;1,500;1,600;1,700;1,900&display=swap');
+
+* {
+    position: relative;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    scroll-behavior: smooth;
+    outline: none;
+    font-family: 'Amiri', serif;
+}
+.home{
+    background-color: rgb(0, 0, 0)
+}
+.logo img {
+    width: 100px;
+    min-height: 100px;
+    border-radius: 50%;
+    transition: 2s;
+    margin-top: 10px;
+    margin-left: 10px;
+    /* إضافة تأثير box-shadow */
+    box-shadow: 0 .2rem 2rem #ffffff;
+}
+
+.logo img:hover {
+    transform: rotate(360deg);
+    /* يمكنك تغيير التأثير أثناء التحويل (hover) إذا كنت ترغب */
+    box-shadow: 0 .2rem 2rem #ffffff;
+}
+
+
+header {
+    position: fixed;
+    color: #ffffff; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px; /* تعديل القيمة حسب احتياجاتك */
+    transition: .5s;
+}
+
+header.sticky {
+    background: #000000;
+    box-shadow: 0 .2rem 2rem #ffffff;
+}
+
+#darkmode-icon{
+    font-size: 20px;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.navbar  a {
+    font-family: 'Poppins', 'Mochiy Pop One', 'Paytone One', 'Rubik', sans-serif;
+    text-transform: uppercase;
+    font-size: 1.1em;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 700;
+    padding-left: 20px;
+}
+
+.navbar a::after{
+    content: '';
+    left: 0;
+    bottom: -6px;
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background:#ffffff ;
+    border-radius: 5px;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform .4s ease;
+}
+
+.navbar a:hover{
+    color: #df2828;
+}
+
+.navbar a:hover::after{
+    transform: scaleX(0.7);
+}
+
+.video-container video {
+    height: 100vh;
+    width: 100%;
+    object-fit: cover; /* تأثير تغطية للحفاظ على نسبة العرض والارتفاع */
+}
+
+
+.img{
+    position: absolute;
+    object-fit: cover;
+    z-index: 20;
+    bottom: -1px;
+    transform: rotate(180deg);
+    height: 15vh;
+    width: 100%;
+}
+
+.aboutme {
+    margin-top: 2%;
+    
+}
+.about {
+    border: 10px solid #000000;
+    border-radius: 20px;
+    overflow: hidden; /* تجنب خروج النصوص خارج الحاوية */
+}
+.parent {
+    width: 100%;
+    text-align: right;
+    display: flex;
+    justify-content: flex-end; /* يضع العناصر على اليمين */
+}
+
+.child {
+    background-color: rgb(0, 0, 0);
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform-style: preserve-3d;
+    transition: all 0.5s ease-in-out;
+    border-radius: 50%;
+    margin: 10px 10px;
+}
+
+.child:hover {
+    background-color: white;
+    background-position: -100px 100px, -100px 100px;
+    transform: rotate3d(0.5, 1, 0, 30deg);
+    transform: perspective(180px) rotateX(60deg) translateY(2px);
+    box-shadow: 0px 10px 10px #c00000;
+}
+
+button {
+    border: none;
+    background-color: transparent;
+    font-size: 20px;
+}
+
+.button:hover {
+    width: inherit;
+    height: inherit;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translate3d(0px, 0px, 15px) perspective(180px) rotateX(-35deg) translateY(2px);
+    border-radius: 50%;
+}
+
+.about h1 {
+    margin: 10px 10px;
+    border-radius: 60px 60px 60px 60px;
+    font-family: 'Poppins', 'Mochiy Pop One', 'Paytone One', 'Rubik', sans-serif;
+    color: #ffffff; /* لون النص - أبيض */
+    background: rgb(0, 0, 0); /* لون الخلفية - أسود */
+    font-size: 35px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    text-align: right;
+}
+
+.about h1 span {
+    font-family: 'Poppins', 'Mochiy Pop One', 'Paytone One', 'Rubik', sans-serif;
+    color: #ff0000; /* لون النص في الجزء المحدد - أحمر */
+    font-weight: bold;
+}
+
+
+
+.about h2 {
+    margin: 10px 10px;
+    margin-left: 5%;
+    color: rgb(0, 0, 0);
+    font-size: 40px;
+    margin-bottom: 10px; /* تعديل المسافة بين العنوان والنص */
+    text-align: right; /* يوجه النص إلى اليمين */
+}
+.about h3 {
+    margin: 0 10px;
+    font-size: 25px;
+    font-weight: 900;
+    float: right; /* يضع النص على اليمين */
+    text-align: right; /* يوجه النص إلى اليمين */
+    color: #000000;
+    margin-top: 10px;
+    
+}
+
+
+
+
+.about-img img {
+    border: 5px solid rgb(255, 255, 255);
+    box-shadow: 10px 10px 50px rgb(0, 0, 0);
+    animation: about-img 4s ease-in-out infinite;
+    border-radius: 15%;
+    margin-top: -95px; /* تعديل المسافة العلوية بين الصورة والنص */
+    margin-left: 10px; /* تعديل المسافة الجانبية بين الصورة والنص */
+    width: 20%;
+    height: auto; /* للحفاظ على نسب الصورة */
+}
+@keyframes about-img{
+    0%{
+        border-radius: 15%;
+        transform: translateY(0);
+    }
+    50%{
+        border-radius: 35%;
+        transform: translateY(-2.4rem);
+    }
+    100%{
+        border-radius: 15%;
+        transform: translateY(0);
+    }
+}
+.container {
+    border-radius: 20px;
+    width: 100%;
+    height: 100%;
+    --s: 84px;
+    --c1: #f2f2f2;
+    --c2: #cdcbcc;
+    --c3: #999999;
+  
+    --_g: 0 120deg, #0000 0;
+    background: conic-gradient(
+        from 0deg at calc(500% / 6) calc(100% / 3),
+        var(--c3) var(--_g)
+      ),
+      conic-gradient(
+        from -120deg at calc(100% / 6) calc(100% / 3),
+        var(--c2) var(--_g)
+      ),
+      conic-gradient(
+        from 120deg at calc(100% / 3) calc(500% / 6),
+        var(--c1) var(--_g)
+      ),
+      conic-gradient(
+        from 120deg at calc(200% / 3) calc(500% / 6),
+        var(--c1) var(--_g)
+      ),
+      conic-gradient(
+        from -180deg at calc(100% / 3) 50%,
+        var(--c2) 60deg,
+        var(--c1) var(--_g)
+      ),
+      conic-gradient(
+        from 60deg at calc(200% / 3) 50%,
+        var(--c1) 60deg,
+        var(--c3) var(--_g)
+      ),
+      conic-gradient(
+        from -60deg at 50% calc(100% / 3),
+        var(--c1) 120deg,
+        var(--c2) 0 240deg,
+        var(--c3) 0
+      );
+    background-size: calc(var(--s) * 1.100) var(--s);
+}
+.container1 {
+    border-radius: 20px;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(#3f87a6 1%, #ebf8e1a2 10%),
+        linear-gradient(to right, #ebf8e100 10%, #ebf8e100 10.5%);
+    background-size: 100% 25px, 100% 100%;
+    background-repeat: repeat, no-repeat;
+    /* Add your background pattern here */
+}
+
+.about-1 {
+    border: 10px solid #000000;
+    border-radius: 20px;
+    margin-top: 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    position: relative;
+    overflow: hidden;
+}
+
+
+
+.container1 .about-2 h1 {
+    font-size: 28px;
+    font-weight: 900;
+    text-align: right;
+    width: 80%;
+    color: #000000;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    margin-left: 190px; /* تعديل المسافة اليسرى */
+    line-height: 1.4;
+}
+
+.container1 .about-2 h2 {
+    font-size: 20px;
+    font-weight: 550;
+    text-align: right;
+    width: 82%;
+    color: #000000;
+    margin-top: 29px;
+    margin-bottom: 10px;
+    margin-left: 190px; /* تعديل المسافة اليسرى */
+    line-height: 2.5;
+}
+
+.about-1 h1 {
+    font-size: 28px;
+    font-weight: 900;
+    text-align: right;
+    width: 80%;
+    color: #000000;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    margin-left: 190px; /* تعديل المسافة اليسرى */
+    line-height: 1.4;
+}
+
+.about-1 h2 {
+    font-size: 20px;
+    font-weight: 550;
+    text-align: right;
+    width: 82%;
+    color: #000000;
+    margin-top: 35px;
+    margin-bottom: 10px;
+    margin-left: 190px; 
+    line-height: 2.5;
+}
+.about-3 h2 {
+    font-size: 20px;
+    font-weight: 550;
+    text-align: right;
+    width: 82%;
+    color: #000000;
+    margin-top: 20.5px;
+    margin-bottom: 10px;
+    margin-left: 190px; 
+    line-height: 2.5;
+}
+
+.about1-img1 {
+    
+    position: relative;
+    display: flex;
+    justify-content: center;
+    gap: 40px; /* المسافة بين الصور */
+    margin-top: 20px; /* تعديل المسافة العلوية بين النص والصور */
+    margin-bottom: 40px;
+}
+
+.about1-img1 img {
+    border-radius: 15%;
+    width: 18%;
+    height: auto; /* للحفاظ على نسب الصورة */
+}
+
+.slider,
+.slider1 {
+    position: relative;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.list,
+.list1 {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.item img,
+.item1 img {
+    border: 15px solid #000000;
+    border-radius: 25px;
+    width: 100%;
+    max-width: 65vw;
+    max-height: 65vh;
+    object-fit: cover;
+}
+
+.dots,
+.dots1 {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.dot,
+.dot1 {
+    width: 10px;
+    height: 10px;
+    background-color: rgb(0, 0, 0);
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.dot.active,
+.dot1.active1 {
+    background-color: rgb(255, 255, 255);
+}
+
+.buttons,
+.buttons1 {
+    color: #ffffff;
+    position: absolute;
+    top: 50%;
+    width: 110%;
+    display: flex;
+    justify-content: space-evenly;
+    transform: translateY(-50%); /* تصحيح موضع الأزرار عند الوسط عموديًا */
+}
+
+.buttons button,
+.buttons1 button {
+    border: 3px solid #000000;
+    color: #000;
+    background-color: #ffffff;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
+}
+
+.buttons button:hover,
+.buttons1 button:hover {
+    color: #ffffff;
+    background-color: #000000;
+}
+
+.video-container1 {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    gap: 20px;
+    justify-content: center;
+    flex-direction: row-reverse;
+}
+
+.video {
+    flex: 1;
+    margin: 8px;
+
+}
+
+video {
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    border-radius: 8px; /* يمكنك تعديل هذه القيمة حسب تفضيلاتك */
+}
+
+.video-container2 {
+    display: flex;
+    align-items: center;
+    
+}
+
+.video-container2 .video {
+    text-align: center;
+}
+
+.video-container2 video {
+    width: 50%;
+    height: auto;
+    border-radius: 8px; /* يمكنك تعديل هذه القيمة حسب تفضيلاتك */
+}
+.video-container3 {
+    display: flex;
+    align-items: center;
+    
+}
+
+.video-container3 .video {
+    text-align: center;
+}
+
+.video-container3 video {
+    width: 85%;
+    height: auto;
+    border-radius: 8px; /* يمكنك تعديل هذه القيمة حسب تفضيلاتك */
+}
+.Mywork{
+border: 10px solid #000000;
+border-radius: 20px;
+margin-top: 5%;
+display: flex;
+flex-direction: column;
+align-items: center; 
+position: relative;
+overflow: hidden;
+}
+button {
+    font-size: 20px;
+    color: rgb(0, 0, 0);
+    width: 30px;
+    height: 30px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
