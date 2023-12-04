@@ -131,3 +131,75 @@ function pauseOtherVideos(currentVideo) {
         }
     });
 }
+
+// شيفرة الشريحة الثالثة
+
+const sliderList2 = document.querySelector('.slider2 .list2');
+const prevButton2 = document.getElementById('prev2');
+const nextButton2 = document.getElementById('next2');
+const dots2 = document.querySelectorAll('.slider2 .dots2 .dot2');
+
+const images2 = [
+    "./images/img-(10).jpg",
+    "./images/img-(11).jpg",
+    "./images/img-(12).jpg",
+    "./images/img-(13).jpg",
+    "./images/img-(14).jpg",
+    "./images/img-(15).jpg",
+];
+
+let active2 = 0;
+
+reloadSlider2();
+
+function reloadSlider2() {
+    const activeImage2 = document.querySelector('.slider2 .list2 .item2 img');
+    activeImage2.src = images2[active2];
+
+    dots2.forEach((dot, index) => {
+        dot.classList.toggle('active2', index === active2);
+    });
+}
+
+function handleNext2() {
+    active2 = (active2 + 1) % images2.length;
+    reloadSlider2();
+}
+
+function handlePrev2() {
+    active2 = (active2 - 1 + images2.length) % images2.length;
+    reloadSlider2();
+}
+
+function handleDotClick2(index) {
+    active2 = index;
+    reloadSlider2();
+}
+
+nextButton2.addEventListener('click', handleNext2);
+prevButton2.addEventListener('click', handlePrev2);
+
+dots2.forEach((dot, index) => {
+    dot.addEventListener('click', () => handleDotClick2(index));
+});
+
+var videos = document.querySelectorAll('video');
+
+videos.forEach(function(video) {
+    video.addEventListener('play', function() {
+        pauseOtherVideos(video);
+    });
+
+    video.addEventListener('ended', function() {
+        // يتم إيقاف تشغيل الفيديو عند انتهاء التشغيل
+        video.pause();
+    });
+});
+
+function pauseOtherVideos(currentVideo) {
+    videos.forEach(function(video) {
+        if (video !== currentVideo) {
+            video.pause();
+        }
+    });
+}

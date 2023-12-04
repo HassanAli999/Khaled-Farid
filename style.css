@@ -369,7 +369,8 @@ button {
 }
 
 .slider,
-.slider1 {
+.slider1 ,
+.slider2 {
     position: relative;
     margin-top: 20px;
     margin-bottom: 10px;
@@ -379,14 +380,16 @@ button {
 }
 
 .list,
-.list1 {
+.list1 ,
+.list2 {
     display: flex;
     justify-content: center;
     width: 100%;
 }
 
 .item img,
-.item1 img {
+.item1 img ,
+.item2 img {
     border: 15px solid #000000;
     border-radius: 25px;
     width: 100%;
@@ -396,7 +399,8 @@ button {
 }
 
 .dots,
-.dots1 {
+.dots1 ,
+.dots2 {
     list-style: none;
     padding: 0;
     display: flex;
@@ -405,7 +409,8 @@ button {
 }
 
 .dot,
-.dot1 {
+.dot1 ,
+.dot2 {
     width: 10px;
     height: 10px;
     background-color: rgb(0, 0, 0);
@@ -416,12 +421,14 @@ button {
 }
 
 .dot.active,
-.dot1.active1 {
+.dot1.active1,
+.dot2.active2 {
     background-color: rgb(255, 255, 255);
 }
 
 .buttons,
-.buttons1 {
+.buttons1,
+.buttons2 {
     color: #ffffff;
     position: absolute;
     top: 50%;
@@ -432,7 +439,8 @@ button {
 }
 
 .buttons button,
-.buttons1 button {
+.buttons1 button,
+.buttons2 button {
     border: 3px solid #000000;
     color: #000;
     background-color: #ffffff;
@@ -443,7 +451,8 @@ button {
 }
 
 .buttons button:hover,
-.buttons1 button:hover {
+.buttons1 button:hover,
+.buttons2 button:hover {
     color: #ffffff;
     background-color: #000000;
 }
