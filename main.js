@@ -10,8 +10,9 @@ const typed = new Typed("#multiple-text", {
 
 window.onscroll = () => {
     let header = document.querySelector("header");
-    header.classList.toggle("sticky", window.scrollY > 100);
+    header.classList.toggle("sticky", window.scrollY > 200);
 };
+
 
 const sliderList = document.querySelector('.slider .list');
 const prevButton = document.getElementById('prev');
@@ -203,3 +204,24 @@ function pauseOtherVideos(currentVideo) {
         }
     });
 }
+document.addEventListener('DOMContentLoaded', function () {
+    var mySwiper = new Swiper('.mySwiper', {
+      // Your Swiper configuration options here
+      slidesPerView: 3,
+      spaceBetween: 40,
+      loop: true,
+      autoplay: {
+        delay: 5000, // تعيين تأخير التحرك إلى اليمين بمقدار ثانية واحدة
+        disableOnInteraction: false, // يجعل العرض التلقائي يستمر حتى بعد التفاعل مع المستخدم
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      pagination: {
+        el: '.swiper-pagination',
+        type: 'fraction',
+      },
+    });
+  });
+  

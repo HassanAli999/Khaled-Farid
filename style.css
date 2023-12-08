@@ -1,19 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&family=Paytone+One&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,500;1,700;1,800;1,900&family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,900;1,300;1,400;1,500;1,600;1,700;1,900&display=swap');
 
 * {
-    position: relative;
+    
     padding: 0;
     margin: 0;
     box-sizing: border-box;
     text-decoration: none;
     list-style: none;
     scroll-behavior: smooth;
+    border: none;
     outline: none;
     font-family: 'Amiri', serif;
+    position: relative;
 }
-.home{
-    background-color: rgb(0, 0, 0)
-}
+
 .logo img {
     width: 100px;
     min-height: 100px;
@@ -38,23 +38,17 @@ header {
     top: 0;
     left: 0;
     width: 100%;
-    z-index: 100;
+    z-index: 999;
     display: flex;
+    padding: 0 20px;
     justify-content: space-between;
     align-items: center;
-    padding: 10px; /* تعديل القيمة حسب احتياجاتك */
     transition: .5s;
 }
 
 header.sticky {
     background: #000000;
     box-shadow: 0 .2rem 2rem #ffffff;
-}
-
-#darkmode-icon{
-    font-size: 20px;
-    cursor: pointer;
-    padding: 10px;
 }
 
 .navbar  a {
@@ -82,7 +76,7 @@ header.sticky {
 }
 
 .navbar a:hover{
-    color: #df2828;
+    color: #FA0200;
 }
 
 .navbar a:hover::after{
@@ -107,14 +101,23 @@ header.sticky {
 }
 
 .aboutme {
-    margin-top: 2%;
-    
+    margin-top: 4%;
 }
+
+.titl {
+    margin-bottom: 2%;
+    font-weight: 900;
+    font-size: 35px;
+    text-align: center;
+    color: #000000; /* لون النص - أبيض */
+}
+
 .about {
     border: 10px solid #000000;
     border-radius: 20px;
     overflow: hidden; /* تجنب خروج النصوص خارج الحاوية */
 }
+
 .parent {
     width: 100%;
     text-align: right;
@@ -140,7 +143,7 @@ header.sticky {
     background-position: -100px 100px, -100px 100px;
     transform: rotate3d(0.5, 1, 0, 30deg);
     transform: perspective(180px) rotateX(60deg) translateY(2px);
-    box-shadow: 0px 10px 10px #c00000;
+    box-shadow: 0px 10px 10px #FA0200;
 }
 
 button {
@@ -173,7 +176,7 @@ button {
 
 .about h1 span {
     font-family: 'Poppins', 'Mochiy Pop One', 'Paytone One', 'Rubik', sans-serif;
-    color: #ff0000; /* لون النص في الجزء المحدد - أحمر */
+    color: #FA0200; /* لون النص في الجزء المحدد - أحمر */
     font-weight: bold;
 }
 
@@ -423,7 +426,7 @@ button {
 .dot.active,
 .dot1.active1,
 .dot2.active2 {
-    background-color: rgb(255, 255, 255);
+    background-color: #FA0200;
 }
 
 .buttons,
@@ -509,7 +512,17 @@ video {
     height: auto;
     border-radius: 8px; /* يمكنك تعديل هذه القيمة حسب تفضيلاتك */
 }
-.Mywork{
+.titl-1 {
+    margin-top: 2%;
+    margin-bottom: -3%;
+    font-weight: 900;
+    font-size: 35px;
+    text-align: center;
+    color: #000000;
+    mix-blend-mode: difference; /* يمكن تعديل قيمة الـ mix-blend-mode حسب الحاجة */
+}
+
+.video-3{
 border: 10px solid #000000;
 border-radius: 20px;
 margin-top: 5%;
@@ -519,6 +532,7 @@ align-items: center;
 position: relative;
 overflow: hidden;
 }
+
 button {
     font-size: 20px;
     color: rgb(0, 0, 0);
@@ -527,5 +541,72 @@ button {
     border-radius: 10px;
     cursor: pointer;
     transition: background-color 0.3s ease;
-  }
+}
+
+.Achievements{
+    overflow: hidden;
+    
+}
+
+.Achievements-img{
+    border: 10px solid #000000;
+    border-radius: 20px;
+    
+}
+
+.titl-2 {
+    margin-top: 2%;
+    margin-bottom: 2%;
+    font-weight: 900;
+    font-size: 35px;
+    text-align: center;
+    color: #000000;
+    mix-blend-mode: difference; /* يمكن تعديل قيمة الـ mix-blend-mode حسب الحاجة */
+}
+
+/* أنماط CSS للصور في Swiper */
+.swiper-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto;
+    border-radius: 20px;
+    box-shadow: 0px 4px 8px rgb(0, 0, 0); /* تعيين الظل هنا */
+}
+
+
+/* تعيين حدود للصور لمنع تجاوز الحدود الخارجية للشريحة */
+.swiper-container {
+    overflow: hidden;
+}
+
+/* تحسين التنسيق العام للعرض */
+.mySwiper {
+    width: 100%; /* ضبط عرض العرض بشكل عام */
+    margin: 50px auto 10px; /* ضبط الهوامش الخارجية */
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  background-color: #030303;
+  border-radius: 5px;
+  transition: background-color 0.3s; /* إضافة تأثير انتقالي لتغيير لون الخلفية بشكل سلس */
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+  background-color: #FA0200; /* لون الخلفية عند التحريك بواسطة الماوس */
+}
+
+/* أنماط CSS للرموز (السهم) */
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  color: #ffffff !important; /* لون الرمز مع استخدام !important */
+}
+
+.swiper-button-next:hover::after,
+.swiper-button-prev:hover::after {
+  color: #030303 !important; /* لون الرمز عند التحريك بواسطة الماوس */
+}
 
